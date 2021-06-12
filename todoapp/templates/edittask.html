@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 m-auto">
+                <div class="main_box mt-4">
+                    <h3 class="pt-1">Edit Your Task</h3>
+                </div>
+                <div class="showtask float-left">
+                    <div class=" mb-2 mt-2">
+                        <form action="/update/{{task.id}}" method="POST">
+                          {% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" name="task" class="form-control" value="{{task.task}}">
+                            </div>
+                                <button type="submit" class="btn btn-outline-success mt-1 btn-sm">Update</button>
+                                <a href="/home"  class="btn btn-outline-danger mt-1 btn-sm">Cancle</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+

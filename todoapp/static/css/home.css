@@ -1,0 +1,59 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body,html
+{
+    height: 100%;
+    background-image: linear-gradient(to right, #D500F9, #FFD54F);
+    background-repeat: no-repeat;
+}
+.nav_bg
+{
+    background-color: #4090a8;
+    color: white;
+}
+.main_box
+{
+    background-color: #6bccea;
+    padding: 25px 20px;
+}
+.task_input
+{
+    width: 87%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #D500F9;
+    vertical-align: middle;
+}
+.showtask
+{
+    width: 100%;
+    background-color: white;
+    padding:30px 20px;
+    height: 300px;
+    overflow-y: auto;
+}    
+.showspace
+{
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #D500F9;
+    vertical-align: middle;
+    overflow-x: hidden;
+}
+.tasktext
+{
+    width: 80%;
+    margin: auto;
+    padding: 5px 5px 0px 30px;
+}
+.delete_btn
+{
+    vertical-align: middle;
+    border: none;
+}

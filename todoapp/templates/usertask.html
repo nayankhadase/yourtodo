@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+{% for t in task %}
+{% if user.username == t.user_data %}
+<div class="showspace float-left mb-2">
+    <div class="tasktext float-left">{{t.task}}</div>
+
+    <a href="delete/{{t.id}}" class="btn btn-outline-danger float-right delete_btn"><i class="fas fa-trash-alt"></i></a>
+
+    <a href="edit/{{t.id}}" class="btn btn-outline-success float-right delete_btn"><i class="fas fa-pen"></i></a>
+</div>
+
+{% endif %}
+{% endfor %}
+</body>
+</html>
+
+

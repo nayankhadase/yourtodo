@@ -1,0 +1,38 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body,html
+{
+    height: 100%;
+    background-image: linear-gradient(to right, #D500F9, #FFD54F);
+    background-repeat: no-repeat;
+}
+
+.logcontainer
+{
+    border: 1px solid green;
+    background-image: linear-gradient(to right, #5697f8, #4fff88);
+    background-repeat: no-repeat;
+    padding: 30px;
+    border-radius: 10px;
+}
+.input_view
+{
+    background-color: transparent;
+    border-radius: 10px !important;
+    border-color: #D500F9;
+}
+
+.btn_view
+{
+    border-radius: 10px !important;
+    background-image: linear-gradient(to right, #f8e156, #d44fff);
+    background-repeat: no-repeat;
+}
+.link_down
+{
+    margin-top: 10px;
+}

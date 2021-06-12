@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>TODO | Signup</title>
+    <meta name="viewport" content="width:device-width,initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/jq_all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/signup.js' %}"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 m-auto ">
+                <div class="logcontainer mt-4">
+                   <div class="text-center mb-3">
+                       <h1 class="h3">Welcome to Your TODO</h1>
+                   </div>
+                    <form action="signup" method="POST" class="vertical-form" id="signform" >
+                        {% csrf_token %}
+                       <div class="form-group">
+                           <label class="form-control-label">User Name:</label>
+                            <input type="text" name="user" id="uid" class="form-control input_view" placeholder="Enter User Name" required>
+                            {% for m in messages %}
+                            <label class="form-control-label text-danger">{{m}}</label>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                           <label class="form-control-label">First Name:</label>
+                            <input type="text" name="fname" class="form-control input_view" placeholder="Enter First Name" required>
+                        </div>
+                        <div class="form-group">
+                           <label class="form-control-label">Last Name:</label>
+                            <input type="text" name="lname"  class="form-control input_view" placeholder="Enter Last Name" required>
+                        </div>
+                        <div class="form-group">
+                           <label class="form-control-label">Email:</label>
+                            <input type="text" name="email"  class="form-control input_view" placeholder="Enter Email" required>
+                        </div>
+                    
+                        <div class="form-group">
+                           <label class="form-control-label">Password:</label>
+                            <input type="password" name="password" id="pass" class="form-control input_view" placeholder="Enter Password" required>
+                            <label class="form-control-label text-danger" id="passmsg" style="display: none;"></label>
+                        </div>
+                        
+                        <div class="form-group">
+                           <label class="form-control-label">Confirm Password:</label>
+                            <input type="password" id="cpass"  class="form-control input_view" placeholder="Confirm Password" required>
+                        </div>
+                        
+                        <input type="submit" value="Signup" class="btn btn-block btn_view">
+                    </form>
+                    <div class="link_down text-center"><span>Already have account ?? <a href="{% url 'loginpage' %}"> Login </a></span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
